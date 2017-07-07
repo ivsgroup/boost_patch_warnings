@@ -1,0 +1,51 @@
+diff -ur boost_1_62_0_orig/boost/exception/exception.hpp boost_1_62_0_patch_ivs/boost/exception/exception.hpp
+--- boost_1_62_0_orig/boost/exception/exception.hpp	2016-09-21 16:33:27.000000000 +0200
++++ boost_1_62_0_patch_ivs/boost/exception/exception.hpp	2017-07-07 19:05:58.095330000 +0200
+@@ -12,6 +12,12 @@
+ #pragma warning(push,1)
+ #endif
+ 
++#ifdef _MSC_VER
++#pragma warning(push)
++#pragma warning(disable: 4265) // class has virtual functions, but destructor is not virtual
++#endif
++
++
+ namespace
+ boost
+     {
+@@ -514,3 +520,7 @@
+ #pragma warning(pop)
+ #endif
+ #endif
++
++#ifdef _MSC_VER
++#pragma warning(pop)
++#endif
+diff -ur boost_1_62_0_orig/boost/optional/optional.hpp boost_1_62_0_patch_ivs/boost/optional/optional.hpp
+--- boost_1_62_0_orig/boost/optional/optional.hpp	2016-09-21 16:33:25.000000000 +0200
++++ boost_1_62_0_patch_ivs/boost/optional/optional.hpp	2017-07-07 19:05:33.091244900 +0200
+@@ -17,6 +17,13 @@
+ #ifndef BOOST_OPTIONAL_OPTIONAL_FLC_19NOV2002_HPP
+ #define BOOST_OPTIONAL_OPTIONAL_FLC_19NOV2002_HPP
+ 
++#ifdef _MSC_VER
++#pragma warning(push)
++#pragma warning(disable: 4242) 
++#pragma warning(disable: 4244) 
++#endif
++
++
+ #include <new>
+ #include <iosfwd>
+ 
+@@ -1143,4 +1150,9 @@
+ #include <boost/optional/detail/optional_relops.hpp>
+ #include <boost/optional/detail/optional_swap.hpp>
+ 
++#ifdef _MSC_VER
++#pragma warning(pop)
++#endif
++
++
+ #endif // header guard

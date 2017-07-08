@@ -8,4 +8,6 @@ tar xvf boost_1_64_0.tar.bz2
 mv boost_1_64_0 boost_1_64_0-patchivs
 cd boost_1_64_0-patchivs
 patch -p1 -i  ../../boost_patch_ivs.patch
+cd ..
+tar -jcvf boost_1_64_0-patchivs.tar.bz2 boost_1_64_0-patchivs
 

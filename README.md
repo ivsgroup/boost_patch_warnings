@@ -78,3 +78,8 @@ HunterGate(
     FILEPATH "${CMAKE_CURRENT_LIST_DIR}/config.cmake"
 )
 ```
+* Edtier le fichier `activisu_src\cmake\Hunter\config.cmake`
+Et changer la ligne ci-dessous en mettant le nom de version donnée dans le repo hunter
+```
+hunter_config(Boost VERSION 1.64.0-patchivs)  
+```

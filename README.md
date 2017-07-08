@@ -5,6 +5,19 @@ A repo that contains archives for the boost patches
 Do not use this repo alone, use the master repo
 https://github.com/ivsgroup/hunter_master
 
+# Status / que corrige ce patch
+
+Explication du probleme sur boost: 
+Voir https://github.com/ivsgroup/boost_warnings_minimal_demo
+
+Nb : dans boost 1.64, ne reste que le probleme sur boost/exception.hpp
+(il n'y a plus de probleme sur optional.hpp)
+
+Une proposition de correction a été postée sur le site officiel de boost.
+Voir ici : 
+https://github.com/boostorg/exception/pull/9
+
+
 # Comment créer une version 
 
 Exemple avec boost 1.64.0

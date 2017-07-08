@@ -1,6 +1,5 @@
-diff -ur boost_1_62_0_orig/boost/exception/exception.hpp boost_1_62_0_patch_ivs/boost/exception/exception.hpp
---- boost_1_62_0_orig/boost/exception/exception.hpp	2016-09-21 16:33:27.000000000 +0200
-+++ boost_1_62_0_patch_ivs/boost/exception/exception.hpp	2017-07-07 19:05:58.095330000 +0200
+--- a/boost/exception/exception.hpp
++++ b/boost/exception/exception.hpp
 @@ -12,6 +12,12 @@
  #pragma warning(push,1)
  #endif
@@ -22,9 +21,8 @@ diff -ur boost_1_62_0_orig/boost/exception/exception.hpp boost_1_62_0_patch_ivs/
 +#ifdef _MSC_VER
 +#pragma warning(pop)
 +#endif
-diff -ur boost_1_62_0_orig/boost/optional/optional.hpp boost_1_62_0_patch_ivs/boost/optional/optional.hpp
---- boost_1_62_0_orig/boost/optional/optional.hpp	2016-09-21 16:33:25.000000000 +0200
-+++ boost_1_62_0_patch_ivs/boost/optional/optional.hpp	2017-07-07 19:05:33.091244900 +0200
+--- a/boost/optional/optional.hpp
++++ b/boost/optional/optional.hpp
 @@ -17,6 +17,13 @@
  #ifndef BOOST_OPTIONAL_OPTIONAL_FLC_19NOV2002_HPP
  #define BOOST_OPTIONAL_OPTIONAL_FLC_19NOV2002_HPP

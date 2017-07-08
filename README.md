@@ -57,3 +57,24 @@ hunter_add_version(
 Update hunter version : This release is based on hunter official tag v0.18.15 and adds patches against msvc warnings for opencv, boost, and gtest. It also updates boost to 1.64.0-patchivs
 ```
 
+### 4/ Utiliser cette release dans le code activisu
+* Calculer le sha1 de la release hunter: 
+Par exemple, faire ceci (en donnant la bonne url de l'archive !)
+```
+wget https://github.com/ivsgroup/hunter/archive/v0.18.15-ivs-2.tar.gz
+shasum v0.18.15-ivs-2.tar.gz
+c1c2f1af19ec3e97cbdb16f64d24b0fc64b7a6c9  v0.18.15-ivs-2.tar.gz
+```
+
+* Editer le fichier `activisu_src\cmake\Hunter\HunterInit.cmake`
+
+* Lui donner un contenu comme ci-dessous, en donnant la bonne url et le bon sha1
+```
+include("${CMAKE_CURRENT_LIST_DIR}/HunterGate.cmake")
+set(HUNTER_CONFIGURATION_TYPES Debug Release RelWithDebInfo)
+HunterGate(
+    URL "https://github.com/ivsgroup/hunter/archive/v0.18.15-ivs-2.tar.gz"
+    SHA1 "c1c2f1af19ec3e97cbdb16f64d24b0fc64b7a6c9"
+    FILEPATH "${CMAKE_CURRENT_LIST_DIR}/config.cmake"
+)
+```

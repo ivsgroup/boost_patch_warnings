@@ -16,6 +16,7 @@ Nb : dans boost 1.64, ne reste que le probleme sur boost/exception.hpp
 Une proposition de correction a été postée sur le site officiel de boost.
 Voir ici : 
 https://github.com/boostorg/exception/pull/9
+Le pb a aussi été signalé, en attente de réponse : https://svn.boost.org/trac10/ticket/13227
 
 
 # Comment créer une version 
